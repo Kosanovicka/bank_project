@@ -1,0 +1,4 @@
+c:\users\hp 4710s\documents\visual studio 2015\Projects\Projekat_za_oop\Projekat_za_oop\bin\Debug\Projekat_za_oop.exe.config
+c:\users\hp 4710s\documents\visual studio 2015\Projects\Projekat_za_oop\Projekat_za_oop\obj\Debug\Projekat_za_oop.csprojResolveAssemblyReference.cache
+c:\users\hp 4710s\documents\visual studio 2015\Projects\Projekat_za_oop\Projekat_za_oop\obj\Debug\Projekat_za_oop.Properties.Resources.resources
+c:\users\hp 4710s\documents\visual studio 2015\Projects\Projekat_za_oop\Projekat_za_oop\obj\Debug\Projekat_za_oop.csproj.GenerateResource.Cache
