@@ -21,7 +21,6 @@ namespace Projekat_za_oop.Klase
             this.godIzdavanja = godIz;
             this.mesecIzdavanja = mesIz;
             this.iznos = iznos;
-
             this.dozvoljeniMinus = dozMin;
 
         }
