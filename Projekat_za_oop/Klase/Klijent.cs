@@ -37,6 +37,8 @@ namespace Projekat_za_oop.Klase
             this.Racun = Racun;
         }
 
+        
+
         public Klijent(TextBox tb_Ime, TextBox tb_prezime, TextBox tb_jmbg, string text)
         {
             this.tb_Ime = tb_Ime;
@@ -45,6 +47,11 @@ namespace Projekat_za_oop.Klase
             this.text = text;
         }
 
+        public string kreirajKlijenta(string ime, string prezime, string jmbg, int godRodj, Racun Racun)
+        {
+            return "Ime i Prezime:" + this.ime + this.prezime + "jmbg:" + this.jmbg + "Godina rodjenja:" + this.godRodj + "Racun:" + this.Racun;
+
+        }
         public string Jmbg
         {
             get
