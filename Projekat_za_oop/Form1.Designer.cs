@@ -44,6 +44,14 @@
             this.lb_jmbg = new System.Windows.Forms.Label();
             this.gb2 = new System.Windows.Forms.GroupBox();
             this.gb_lbl_racun = new System.Windows.Forms.Label();
+            this.bt1_Dev = new System.Windows.Forms.Button();
+            this.bt2_din = new System.Windows.Forms.Button();
+            this.lbl2_trenstanje = new System.Windows.Forms.Label();
+            this.lbl3_minus = new System.Windows.Forms.Label();
+            this.stanjeporuka = new System.Windows.Forms.Label();
+            this.minusporuka = new System.Windows.Forms.Label();
+            this.lbl_podaciOklijentu = new System.Windows.Forms.Label();
+            this.poruka_podaciklijent = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gb1_login.SuspendLayout();
             this.gb2.SuspendLayout();
@@ -145,7 +153,7 @@
             this.gb1_login.Controls.Add(this.tb_Ime);
             this.gb1_login.Location = new System.Drawing.Point(12, 12);
             this.gb1_login.Name = "gb1_login";
-            this.gb1_login.Size = new System.Drawing.Size(673, 583);
+            this.gb1_login.Size = new System.Drawing.Size(79, 56);
             this.gb1_login.TabIndex = 10;
             this.gb1_login.TabStop = false;
             this.gb1_login.Text = "Login";
@@ -193,10 +201,18 @@
             // gb2
             // 
             this.gb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gb2.Controls.Add(this.poruka_podaciklijent);
+            this.gb2.Controls.Add(this.lbl_podaciOklijentu);
+            this.gb2.Controls.Add(this.minusporuka);
+            this.gb2.Controls.Add(this.stanjeporuka);
+            this.gb2.Controls.Add(this.lbl3_minus);
+            this.gb2.Controls.Add(this.lbl2_trenstanje);
+            this.gb2.Controls.Add(this.bt2_din);
+            this.gb2.Controls.Add(this.bt1_Dev);
             this.gb2.Controls.Add(this.gb_lbl_racun);
-            this.gb2.Location = new System.Drawing.Point(749, 12);
+            this.gb2.Location = new System.Drawing.Point(120, 12);
             this.gb2.Name = "gb2";
-            this.gb2.Size = new System.Drawing.Size(112, 30);
+            this.gb2.Size = new System.Drawing.Size(138, 56);
             this.gb2.TabIndex = 11;
             this.gb2.TabStop = false;
             this.gb2.Text = "Racun Klijenta";
@@ -205,11 +221,83 @@
             // 
             this.gb_lbl_racun.AutoSize = true;
             this.gb_lbl_racun.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gb_lbl_racun.Location = new System.Drawing.Point(36, 34);
+            this.gb_lbl_racun.Location = new System.Drawing.Point(476, 16);
             this.gb_lbl_racun.Name = "gb_lbl_racun";
             this.gb_lbl_racun.Size = new System.Drawing.Size(58, 23);
             this.gb_lbl_racun.TabIndex = 0;
             this.gb_lbl_racun.Text = "Racun";
+            // 
+            // bt1_Dev
+            // 
+            this.bt1_Dev.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt1_Dev.Location = new System.Drawing.Point(468, 294);
+            this.bt1_Dev.Name = "bt1_Dev";
+            this.bt1_Dev.Size = new System.Drawing.Size(235, 58);
+            this.bt1_Dev.TabIndex = 1;
+            this.bt1_Dev.Text = "Devizni racun";
+            this.bt1_Dev.UseVisualStyleBackColor = true;
+            // 
+            // bt2_din
+            // 
+            this.bt2_din.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt2_din.Location = new System.Drawing.Point(468, 206);
+            this.bt2_din.Name = "bt2_din";
+            this.bt2_din.Size = new System.Drawing.Size(237, 59);
+            this.bt2_din.TabIndex = 2;
+            this.bt2_din.Text = "Dinarski racun";
+            this.bt2_din.UseVisualStyleBackColor = true;
+            // 
+            // lbl2_trenstanje
+            // 
+            this.lbl2_trenstanje.AutoSize = true;
+            this.lbl2_trenstanje.Location = new System.Drawing.Point(476, 61);
+            this.lbl2_trenstanje.Name = "lbl2_trenstanje";
+            this.lbl2_trenstanje.Size = new System.Drawing.Size(87, 13);
+            this.lbl2_trenstanje.TabIndex = 3;
+            this.lbl2_trenstanje.Text = "Trenutno stanje: ";
+            // 
+            // lbl3_minus
+            // 
+            this.lbl3_minus.AutoSize = true;
+            this.lbl3_minus.Location = new System.Drawing.Point(474, 98);
+            this.lbl3_minus.Name = "lbl3_minus";
+            this.lbl3_minus.Size = new System.Drawing.Size(89, 13);
+            this.lbl3_minus.TabIndex = 4;
+            this.lbl3_minus.Text = "Dozvoljeni minus:";
+            // 
+            // stanjeporuka
+            // 
+            this.stanjeporuka.AutoSize = true;
+            this.stanjeporuka.Location = new System.Drawing.Point(607, 61);
+            this.stanjeporuka.Name = "stanjeporuka";
+            this.stanjeporuka.Size = new System.Drawing.Size(0, 13);
+            this.stanjeporuka.TabIndex = 5;
+            // 
+            // minusporuka
+            // 
+            this.minusporuka.AutoSize = true;
+            this.minusporuka.Location = new System.Drawing.Point(607, 98);
+            this.minusporuka.Name = "minusporuka";
+            this.minusporuka.Size = new System.Drawing.Size(0, 13);
+            this.minusporuka.TabIndex = 6;
+            // 
+            // lbl_podaciOklijentu
+            // 
+            this.lbl_podaciOklijentu.AutoSize = true;
+            this.lbl_podaciOklijentu.Font = new System.Drawing.Font("Monospac821 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_podaciOklijentu.Location = new System.Drawing.Point(17, 50);
+            this.lbl_podaciOklijentu.Name = "lbl_podaciOklijentu";
+            this.lbl_podaciOklijentu.Size = new System.Drawing.Size(208, 22);
+            this.lbl_podaciOklijentu.TabIndex = 7;
+            this.lbl_podaciOklijentu.Text = "Podaci o klijentu:";
+            // 
+            // poruka_podaciklijent
+            // 
+            this.poruka_podaciklijent.AutoSize = true;
+            this.poruka_podaciklijent.Location = new System.Drawing.Point(152, 135);
+            this.poruka_podaciklijent.Name = "poruka_podaciklijent";
+            this.poruka_podaciklijent.Size = new System.Drawing.Size(0, 13);
+            this.poruka_podaciklijent.TabIndex = 8;
             // 
             // Form1
             // 
@@ -251,6 +339,14 @@
         private System.Windows.Forms.TextBox tb_jmbg;
         private System.Windows.Forms.TextBox tb_godrodj;
         private System.Windows.Forms.Label lb_godrodj;
+        private System.Windows.Forms.Label poruka_podaciklijent;
+        private System.Windows.Forms.Label lbl_podaciOklijentu;
+        private System.Windows.Forms.Label minusporuka;
+        private System.Windows.Forms.Label stanjeporuka;
+        private System.Windows.Forms.Label lbl3_minus;
+        private System.Windows.Forms.Label lbl2_trenstanje;
+        private System.Windows.Forms.Button bt2_din;
+        private System.Windows.Forms.Button bt1_Dev;
     }
 }
 

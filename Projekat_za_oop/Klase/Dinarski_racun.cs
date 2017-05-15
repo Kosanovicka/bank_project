@@ -20,7 +20,7 @@ namespace Projekat_za_oop.Klase
         public void StanjeNaRacunu(double stanje)
         {
             this.stanje = 85000;
-
+             
         }
         public double DozMinus
         {

@@ -39,8 +39,6 @@ namespace Projekat_za_oop
             this.Klijent = new Klijent(tb_Ime, tb_prezime, tb_jmbg, tb_godrodj.Text);
 
 
-
-
         }
 
         private void tb_Ime_TextChanged(object sender, EventArgs e)

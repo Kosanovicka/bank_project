@@ -33,7 +33,7 @@ namespace Projekat_za_oop.Klase
             this.ime = "";
             this.prezime = "";
             this.jmbg = jmbg;
-            this.godRodj = godRodj;
+            this.godRodj = godRodj;   
             this.Racun = Racun;
         }
 

@@ -18,7 +18,6 @@ namespace Projekat_za_oop.Klase
             this.brRacuna = brRac;
             this.stanje = stanje;
             this.dozvoljeniMinus = dozMin;
-
         }
 
         public Racun()

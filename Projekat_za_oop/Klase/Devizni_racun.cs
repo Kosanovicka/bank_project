@@ -19,8 +19,7 @@ namespace Projekat_za_oop.Klase
             this.iban = ib;
             this.swift = sw;
             this.brRacuna = brRac;
-            
-        }
+          }
 
         public double Iban()
         {
