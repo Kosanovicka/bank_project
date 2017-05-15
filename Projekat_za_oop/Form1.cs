@@ -13,6 +13,8 @@ namespace Projekat_za_oop
 {
     public partial class Form1 : Form
     {
+        public Klijent Klijent { get; private set; }
+
         public Form1()
         {
             InitializeComponent();
