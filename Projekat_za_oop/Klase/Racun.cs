@@ -22,7 +22,6 @@ namespace Projekat_za_oop.Klase
             this.mesecIzdavanja = mesIz;
             this.iznos = iznos;
             this.dozvoljeniMinus = dozMin;
-
         }
 
         public string Ispis()

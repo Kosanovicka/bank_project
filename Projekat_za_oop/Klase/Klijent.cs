@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Projekat_za_oop.Klase
 {
 
-    public class Klijent 
-      {
-        
+    public class Klijent
+    {
+
         public string ime;
         public string prezime;
         protected string jmbg;
@@ -23,7 +23,7 @@ namespace Projekat_za_oop.Klase
             this.jmbg = jmbg;
             this.godRodj = godRodj;
         }
-        public Klijent(string ime, string prezime,string jmbg, int godRodj, Racun Racun) 
+        public Klijent(string ime, string prezime, string jmbg, int godRodj, Racun Racun)
         {
             this.ime = "";
             this.prezime = "";
@@ -51,10 +51,5 @@ namespace Projekat_za_oop.Klase
             }
         }
 
-        
-       
     }
 }
-
- 
-
