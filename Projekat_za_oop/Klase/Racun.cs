@@ -9,30 +9,37 @@ namespace Projekat_za_oop.Klase
     public class Racun
     {
 
-        public string brRacuna;
-        public int godIzdavanja;
-        public int mesecIzdavanja;
-        public double iznos;
+        protected string brRacuna;
+        public double stanje;
         public double dozvoljeniMinus;
 
-        public Racun(string brRac, int godIz, int mesIz,double iznos,double dozMin)
+        public Racun(string brRac,double stanje,double dozMin)
         {
             this.brRacuna = brRac;
-            this.godIzdavanja = godIz;
-            this.mesecIzdavanja = mesIz;
-            this.iznos = iznos;
+            this.stanje = stanje;
             this.dozvoljeniMinus = dozMin;
+
         }
 
+        public Racun()
+        {
+            this.brRacuna = "";
+            this.stanje = 0;
+            this.dozvoljeniMinus = 10000;
+        }
+        
         public string Ispis()
         {
-            return "Broj Racuna: " + this.brRacuna + " Godina izdavanja: " + this.godIzdavanja + " Mesec izdavanja: " + this.mesecIzdavanja+"Iznos:"+this.iznos+"Dozvoljeni minus:"+this.dozvoljeniMinus;
+            return "Broj Racuna: " + this.brRacuna +"Stanje:"+this.stanje+"Dozvoljeni minus:"+this.dozvoljeniMinus;
         }
          public void Uplata(double dodatnaUplata)
         {
-             iznos += dodatnaUplata;
+             stanje += dodatnaUplata;
         }
-        
+        public void Isplata(double SkidanjeNovca)
+        {
+            stanje -= SkidanjeNovca;
+        }
     }
 }
         
