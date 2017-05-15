@@ -12,6 +12,7 @@ namespace Projekat_za_oop.Klase
         protected string brRacuna;
         public double stanje;
         public double dozvoljeniMinus;
+        public Klijent klijent;
 
         public Racun(string brRac,double stanje,double dozMin)
         {

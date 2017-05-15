@@ -13,13 +13,13 @@ namespace Projekat_za_oop.Klase
         protected string swift;
         protected Racun Racun;
 
-        public Devizni_Racun( Racun racun, string brRac, string ib, string sw)
+        public Devizni_racun(Racun racun, string brRac, string ib, string sw)
         {
-            this.stanjeUEur = stanje/124;
+            this.stanjeUEur = stanje / 124;
             this.iban = ib;
             this.swift = sw;
             this.brRacuna = brRac;
-          }
+        }
 
         public double Iban()
         {

@@ -8,3 +8,13 @@ c:\users\hp 4710s\documents\visual studio 2015\Projects\Projekat_za_oop\Projekat
 c:\users\hp 4710s\documents\visual studio 2015\Projects\Projekat_za_oop\Projekat_za_oop\obj\Debug\Projekat_za_oop.exe
 c:\users\hp 4710s\documents\visual studio 2015\Projects\Projekat_za_oop\Projekat_za_oop\obj\Debug\Projekat_za_oop.pdb
 c:\users\hp 4710s\documents\visual studio 2015\Projects\Projekat_za_oop\Projekat_za_oop\obj\Debug\Projekat_za_oop.Racun.resources
+C:\Users\Jovan\Documents\Visual Studio 2017\Projects\Boda_Projekat\Projekat_za_oop\bin\Debug\Projekat_za_oop.exe.config
+C:\Users\Jovan\Documents\Visual Studio 2017\Projects\Boda_Projekat\Projekat_za_oop\bin\Debug\Projekat_za_oop.exe
+C:\Users\Jovan\Documents\Visual Studio 2017\Projects\Boda_Projekat\Projekat_za_oop\bin\Debug\Projekat_za_oop.pdb
+C:\Users\Jovan\Documents\Visual Studio 2017\Projects\Boda_Projekat\Projekat_za_oop\obj\Debug\Projekat_za_oop.csprojResolveAssemblyReference.cache
+C:\Users\Jovan\Documents\Visual Studio 2017\Projects\Boda_Projekat\Projekat_za_oop\obj\Debug\Projekat_za_oop.Form1.resources
+C:\Users\Jovan\Documents\Visual Studio 2017\Projects\Boda_Projekat\Projekat_za_oop\obj\Debug\Projekat_za_oop.Racun.resources
+C:\Users\Jovan\Documents\Visual Studio 2017\Projects\Boda_Projekat\Projekat_za_oop\obj\Debug\Projekat_za_oop.Properties.Resources.resources
+C:\Users\Jovan\Documents\Visual Studio 2017\Projects\Boda_Projekat\Projekat_za_oop\obj\Debug\Projekat_za_oop.csproj.GenerateResource.Cache
+C:\Users\Jovan\Documents\Visual Studio 2017\Projects\Boda_Projekat\Projekat_za_oop\obj\Debug\Projekat_za_oop.exe
+C:\Users\Jovan\Documents\Visual Studio 2017\Projects\Boda_Projekat\Projekat_za_oop\obj\Debug\Projekat_za_oop.pdb
