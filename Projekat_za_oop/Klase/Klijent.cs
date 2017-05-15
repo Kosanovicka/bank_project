@@ -6,45 +6,55 @@ using System.Threading.Tasks;
 
 namespace Projekat_za_oop.Klase
 {
-    
-        public class Klijent : Osoba:
+
+    public class Klijent 
+      {
+        
+        public string ime;
+        public string prezime;
+        protected string jmbg;
+        public int godRodj;
+        public Racun Racun;
+
+        public Klijent(string jmbg, int godRodj)
         {
-            public bool ImaRacun;
-            public Racun Racun;
-            public int SifraFilijale;
-
-
-            public Klijent(string jmbg, int godRodj, bool ImaRac, Racun Racun,int SifraFilijale) : base(jmbg, godRodj)
-            {
-                this.ImaRacun = ImaRac;
-                this.Racun = Racun;
-                this.SifraFilijale = SifraFilijale;
-            }
-
-
-        public void Uplata(double dodatnaUplata)
-        {
-            
+            this.ime = "";
+            this.prezime = "";
+            this.jmbg = jmbg;
+            this.godRodj = godRodj;
         }
-        public int PromenaSF
+        public Klijent(string ime, string prezime,string jmbg, int godRodj, Racun Racun) 
+        {
+            this.ime = "";
+            this.prezime = "";
+            this.jmbg = jmbg;
+            this.godRodj = godRodj;
+            this.Racun = Racun;
+        }
+
+        public string Jmbg
         {
             get
             {
-                return this.SifraFilijale;
+                return this.jmbg;
             }
             set
             {
-                if (value >10 || value<1)
+                if (value == null || value == "")
                 {
-                    throw new Exception("Greska,Morate uneti vise od 1, a manje od 10 brojeva");
+                    throw new Exception("Greska");
                 }
                 else
                 {
-                    this.SifraFilijale = value;
+                    this.jmbg = value;
                 }
             }
         }
-    }
 
+        
+       
     }
 }
+
+ 
+
