@@ -73,9 +73,9 @@ namespace Projekat_za_oop
                 lbl_Poruka.Text = "";
 
                 lbl_KlijentIme.Text = "Ime: " + klijent.ime;
-                lbl_KlijentPrezime.Text = klijent.prezime;
-                lbl_KlijentJbmg.Text = klijent.Jmbg;
-                lbl_KlijentGodRodj.Text = klijent.godRodj.ToString();
+                lbl_KlijentPrezime.Text ="Prezime: " + klijent.prezime;
+                lbl_KlijentJbmg.Text = "Jmbg: " + klijent.Jmbg;
+                lbl_KlijentGodRodj.Text = "Godina rodjenja: " + klijent.godRodj.ToString();
             }
             else
             {
@@ -185,7 +185,76 @@ namespace Projekat_za_oop
 
         #endregion
 
+        
+
+        private void b_uplati_Click_1(object sender, EventArgs e)
+        {
+           
+            
+            string iznos = tb_iznos.Text;
+            string brRacuna = tb_brRacuna.Text;
+
+            if (iznos == "" || brRacuna == "")
+                MessageBox.Show("Najpre unesite broj racuna i iznos!");
+            else
+            {
+                
+                int iznos1 = int.Parse(iznos);
+
+                
+                DinarskiRacun racuni0 = new DinarskiRacun(brRacuna, 0);
+                DevizniRacun racuni1 = new DevizniRacun(brRacuna, 0);
+
+
+                richTB_poruka.Text = "";
+
+                
+                richTB_poruka.AppendText("Uplata na racun " + brRacuna + " u iznosu od " + iznos1 +" din.\n");
+                racuni0.UplatiNaRacun(iznos1);
+                richTB_poruka.AppendText("Podaci o racunu posle uplate: \n" +racuni0.VratiPodatkeORacunu());
+
+                richTB_poruka.AppendText("Uplata na racun " + brRacuna + " u iznosu od " + iznos1 +" din.\n");
+                racuni1.UplatiNaRacun(iznos1);
+                
+                richTB_poruka.AppendText("Podaci o racunu posle uplate: \n" +
+                racuni1.VratiPodatkeORacunu());
+
+            }
+        }
+
+        private void b_isplati_Click_1(object sender, EventArgs e)
+       
+        {
+            
+            string iznos = tb_iznos.Text;
+            string brRacuna = tb_brRacuna.Text;
+
+            if (iznos == "" || brRacuna == "")
+                MessageBox.Show("Najpre unesite broj racuna i iznos!");
+            else
+            {
+                
+                double iznos1 = double.Parse(iznos);
+
+                
+                DinarskiRacun racuni0 = new DinarskiRacun(brRacuna, 0);
+                DevizniRacun racuni1 = new DevizniRacun(brRacuna, 0);
+
+                
+                richTB_poruka.Text = "";
+
+                richTB_poruka.AppendText("Isplata sa racuna " + brRacuna + " u iznosu od " + iznos + " din.\n");
+                racuni0.IsplatiSaRacuna(iznos1);
+                richTB_poruka.AppendText("Podaci o racunu posle isplate: \n" + racuni0.VratiPodatkeORacunu());
+                richTB_poruka.AppendText("Isplata sa racuna " + brRacuna + " u iznosu od " + iznos + " din.\n");
+                racuni1.IsplatiSaRacuna(iznos1);
+                richTB_poruka.AppendText("Podaci o racunu posle isplate: \n" + racuni1.VratiPodatkeORacunu());
+
+            }
+        }
     }
 }
+    
+
 
 

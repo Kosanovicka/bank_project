@@ -49,12 +49,6 @@
             this.lbl_KlijentIme = new System.Windows.Forms.Label();
             this.poruka_podaciklijent = new System.Windows.Forms.Label();
             this.lbl_podaciOklijentu = new System.Windows.Forms.Label();
-            this.minusporuka = new System.Windows.Forms.Label();
-            this.stanjeporuka = new System.Windows.Forms.Label();
-            this.lbl3_minus = new System.Windows.Forms.Label();
-            this.lbl2_trenstanje = new System.Windows.Forms.Label();
-            this.bt2_din = new System.Windows.Forms.Button();
-            this.bt1_Dev = new System.Windows.Forms.Button();
             this.gb_lbl_racun = new System.Windows.Forms.Label();
             this.lbl_Poruka = new System.Windows.Forms.Label();
             this.gb_Login = new System.Windows.Forms.GroupBox();
@@ -64,14 +58,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_Login_Lozinka = new System.Windows.Forms.TextBox();
             this.tb_Login_Jmbg = new System.Windows.Forms.TextBox();
-            this.lbl_brRac = new System.Windows.Forms.Label();
-            this.lbl_Iznos = new System.Windows.Forms.Label();
-            this.lbl_podaciONovcu = new System.Windows.Forms.Label();
-            this.tb_brRacuna = new System.Windows.Forms.TextBox();
-            this.tb_iznos = new System.Windows.Forms.TextBox();
-            this.richTB_poruka = new System.Windows.Forms.RichTextBox();
-            this.b_uplati = new System.Windows.Forms.Button();
             this.b_isplati = new System.Windows.Forms.Button();
+            this.b_uplati = new System.Windows.Forms.Button();
+            this.richTB_poruka = new System.Windows.Forms.RichTextBox();
+            this.tb_iznos = new System.Windows.Forms.TextBox();
+            this.tb_brRacuna = new System.Windows.Forms.TextBox();
+            this.lbl_podaciONovcu = new System.Windows.Forms.Label();
+            this.lbl_Iznos = new System.Windows.Forms.Label();
+            this.lbl_brRac = new System.Windows.Forms.Label();
             this.gb_NoviKlijent.SuspendLayout();
             this.gb_GlavniEkran.SuspendLayout();
             this.gb_Login.SuspendLayout();
@@ -153,7 +147,7 @@
             this.gb_NoviKlijent.Controls.Add(this.tb_Ime);
             this.gb_NoviKlijent.Location = new System.Drawing.Point(12, 12);
             this.gb_NoviKlijent.Name = "gb_NoviKlijent";
-            this.gb_NoviKlijent.Size = new System.Drawing.Size(969, 562);
+            this.gb_NoviKlijent.Size = new System.Drawing.Size(969, 546);
             this.gb_NoviKlijent.TabIndex = 3;
             this.gb_NoviKlijent.TabStop = false;
             // 
@@ -222,23 +216,25 @@
             // gb_GlavniEkran
             // 
             this.gb_GlavniEkran.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gb_GlavniEkran.Controls.Add(this.b_isplati);
+            this.gb_GlavniEkran.Controls.Add(this.b_uplati);
+            this.gb_GlavniEkran.Controls.Add(this.richTB_poruka);
+            this.gb_GlavniEkran.Controls.Add(this.tb_iznos);
+            this.gb_GlavniEkran.Controls.Add(this.tb_brRacuna);
+            this.gb_GlavniEkran.Controls.Add(this.lbl_podaciONovcu);
+            this.gb_GlavniEkran.Controls.Add(this.lbl_Iznos);
+            this.gb_GlavniEkran.Controls.Add(this.lbl_brRac);
             this.gb_GlavniEkran.Controls.Add(this.lbl_KlijentGodRodj);
             this.gb_GlavniEkran.Controls.Add(this.lbl_KlijentJbmg);
             this.gb_GlavniEkran.Controls.Add(this.lbl_KlijentPrezime);
             this.gb_GlavniEkran.Controls.Add(this.lbl_KlijentIme);
             this.gb_GlavniEkran.Controls.Add(this.poruka_podaciklijent);
             this.gb_GlavniEkran.Controls.Add(this.lbl_podaciOklijentu);
-            this.gb_GlavniEkran.Controls.Add(this.minusporuka);
-            this.gb_GlavniEkran.Controls.Add(this.stanjeporuka);
-            this.gb_GlavniEkran.Controls.Add(this.lbl3_minus);
-            this.gb_GlavniEkran.Controls.Add(this.lbl2_trenstanje);
-            this.gb_GlavniEkran.Controls.Add(this.bt2_din);
-            this.gb_GlavniEkran.Controls.Add(this.bt1_Dev);
             this.gb_GlavniEkran.Controls.Add(this.gb_lbl_racun);
             this.gb_GlavniEkran.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.gb_GlavniEkran.Location = new System.Drawing.Point(12, 21);
             this.gb_GlavniEkran.Name = "gb_GlavniEkran";
-            this.gb_GlavniEkran.Size = new System.Drawing.Size(963, 547);
+            this.gb_GlavniEkran.Size = new System.Drawing.Size(962, 682);
             this.gb_GlavniEkran.TabIndex = 11;
             this.gb_GlavniEkran.TabStop = false;
             // 
@@ -296,65 +292,11 @@
             this.lbl_podaciOklijentu.TabIndex = 7;
             this.lbl_podaciOklijentu.Text = "Podaci o klijentu:";
             // 
-            // minusporuka
-            // 
-            this.minusporuka.AutoSize = true;
-            this.minusporuka.Location = new System.Drawing.Point(607, 98);
-            this.minusporuka.Name = "minusporuka";
-            this.minusporuka.Size = new System.Drawing.Size(0, 13);
-            this.minusporuka.TabIndex = 6;
-            // 
-            // stanjeporuka
-            // 
-            this.stanjeporuka.AutoSize = true;
-            this.stanjeporuka.Location = new System.Drawing.Point(607, 61);
-            this.stanjeporuka.Name = "stanjeporuka";
-            this.stanjeporuka.Size = new System.Drawing.Size(0, 13);
-            this.stanjeporuka.TabIndex = 5;
-            // 
-            // lbl3_minus
-            // 
-            this.lbl3_minus.AutoSize = true;
-            this.lbl3_minus.Location = new System.Drawing.Point(474, 98);
-            this.lbl3_minus.Name = "lbl3_minus";
-            this.lbl3_minus.Size = new System.Drawing.Size(89, 13);
-            this.lbl3_minus.TabIndex = 4;
-            this.lbl3_minus.Text = "Dozvoljeni minus:";
-            // 
-            // lbl2_trenstanje
-            // 
-            this.lbl2_trenstanje.AutoSize = true;
-            this.lbl2_trenstanje.Location = new System.Drawing.Point(476, 61);
-            this.lbl2_trenstanje.Name = "lbl2_trenstanje";
-            this.lbl2_trenstanje.Size = new System.Drawing.Size(87, 13);
-            this.lbl2_trenstanje.TabIndex = 3;
-            this.lbl2_trenstanje.Text = "Trenutno stanje: ";
-            // 
-            // bt2_din
-            // 
-            this.bt2_din.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt2_din.Location = new System.Drawing.Point(468, 206);
-            this.bt2_din.Name = "bt2_din";
-            this.bt2_din.Size = new System.Drawing.Size(237, 59);
-            this.bt2_din.TabIndex = 2;
-            this.bt2_din.Text = "Dinarski racun";
-            this.bt2_din.UseVisualStyleBackColor = true;
-            // 
-            // bt1_Dev
-            // 
-            this.bt1_Dev.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt1_Dev.Location = new System.Drawing.Point(468, 294);
-            this.bt1_Dev.Name = "bt1_Dev";
-            this.bt1_Dev.Size = new System.Drawing.Size(235, 58);
-            this.bt1_Dev.TabIndex = 1;
-            this.bt1_Dev.Text = "Devizni racun";
-            this.bt1_Dev.UseVisualStyleBackColor = true;
-            // 
             // gb_lbl_racun
             // 
             this.gb_lbl_racun.AutoSize = true;
             this.gb_lbl_racun.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.gb_lbl_racun.Location = new System.Drawing.Point(476, 16);
+            this.gb_lbl_racun.Location = new System.Drawing.Point(654, 20);
             this.gb_lbl_racun.Name = "gb_lbl_racun";
             this.gb_lbl_racun.Size = new System.Drawing.Size(58, 23);
             this.gb_lbl_racun.TabIndex = 0;
@@ -377,7 +319,7 @@
             this.gb_Login.Controls.Add(this.label2);
             this.gb_Login.Controls.Add(this.tb_Login_Lozinka);
             this.gb_Login.Controls.Add(this.tb_Login_Jmbg);
-            this.gb_Login.Location = new System.Drawing.Point(12, 21);
+            this.gb_Login.Location = new System.Drawing.Point(12, 5);
             this.gb_Login.Name = "gb_Login";
             this.gb_Login.Size = new System.Drawing.Size(969, 553);
             this.gb_Login.TabIndex = 17;
@@ -434,81 +376,81 @@
             this.tb_Login_Jmbg.Size = new System.Drawing.Size(148, 20);
             this.tb_Login_Jmbg.TabIndex = 0;
             // 
-            // lbl_brRac
+            // b_isplati
             // 
-            this.lbl_brRac.AutoSize = true;
-            this.lbl_brRac.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbl_brRac.Location = new System.Drawing.Point(486, 55);
-            this.lbl_brRac.Name = "lbl_brRac";
-            this.lbl_brRac.Size = new System.Drawing.Size(81, 18);
-            this.lbl_brRac.TabIndex = 0;
-            this.lbl_brRac.Text = "Broj racuna:";
+            this.b_isplati.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.b_isplati.Location = new System.Drawing.Point(645, 233);
+            this.b_isplati.Name = "b_isplati";
+            this.b_isplati.Size = new System.Drawing.Size(84, 39);
+            this.b_isplati.TabIndex = 20;
+            this.b_isplati.Text = "ISPLATA";
+            this.b_isplati.UseVisualStyleBackColor = true;
+            this.b_isplati.Click += new System.EventHandler(this.b_isplati_Click_1);
             // 
-            // lbl_Iznos
+            // b_uplati
             // 
-            this.lbl_Iznos.AutoSize = true;
-            this.lbl_Iznos.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbl_Iznos.Location = new System.Drawing.Point(486, 121);
-            this.lbl_Iznos.Name = "lbl_Iznos";
-            this.lbl_Iznos.Size = new System.Drawing.Size(44, 18);
-            this.lbl_Iznos.TabIndex = 1;
-            this.lbl_Iznos.Text = "Iznos:";
+            this.b_uplati.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.b_uplati.Location = new System.Drawing.Point(527, 233);
+            this.b_uplati.Name = "b_uplati";
+            this.b_uplati.Size = new System.Drawing.Size(84, 39);
+            this.b_uplati.TabIndex = 19;
+            this.b_uplati.Text = "UPLATA";
+            this.b_uplati.UseVisualStyleBackColor = true;
+            this.b_uplati.Click += new System.EventHandler(this.b_uplati_Click_1);
+            // 
+            // richTB_poruka
+            // 
+            this.richTB_poruka.Location = new System.Drawing.Point(635, 397);
+            this.richTB_poruka.Name = "richTB_poruka";
+            this.richTB_poruka.Size = new System.Drawing.Size(243, 139);
+            this.richTB_poruka.TabIndex = 18;
+            this.richTB_poruka.Text = "";
+            // 
+            // tb_iznos
+            // 
+            this.tb_iznos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tb_iznos.Location = new System.Drawing.Point(527, 115);
+            this.tb_iznos.Name = "tb_iznos";
+            this.tb_iznos.Size = new System.Drawing.Size(202, 24);
+            this.tb_iznos.TabIndex = 17;
+            // 
+            // tb_brRacuna
+            // 
+            this.tb_brRacuna.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tb_brRacuna.Location = new System.Drawing.Point(527, 49);
+            this.tb_brRacuna.Name = "tb_brRacuna";
+            this.tb_brRacuna.Size = new System.Drawing.Size(202, 24);
+            this.tb_brRacuna.TabIndex = 16;
             // 
             // lbl_podaciONovcu
             // 
             this.lbl_podaciONovcu.AutoSize = true;
             this.lbl_podaciONovcu.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lbl_podaciONovcu.Location = new System.Drawing.Point(486, 399);
+            this.lbl_podaciONovcu.Location = new System.Drawing.Point(440, 397);
             this.lbl_podaciONovcu.Name = "lbl_podaciONovcu";
             this.lbl_podaciONovcu.Size = new System.Drawing.Size(168, 18);
-            this.lbl_podaciONovcu.TabIndex = 2;
+            this.lbl_podaciONovcu.TabIndex = 15;
             this.lbl_podaciONovcu.Text = "Podaci o stanju na racunu:";
             // 
-            // tb_brRacuna
+            // lbl_Iznos
             // 
-            this.tb_brRacuna.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tb_brRacuna.Location = new System.Drawing.Point(573, 51);
-            this.tb_brRacuna.Name = "tb_brRacuna";
-            this.tb_brRacuna.Size = new System.Drawing.Size(202, 24);
-            this.tb_brRacuna.TabIndex = 3;
+            this.lbl_Iznos.AutoSize = true;
+            this.lbl_Iznos.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_Iznos.Location = new System.Drawing.Point(440, 119);
+            this.lbl_Iznos.Name = "lbl_Iznos";
+            this.lbl_Iznos.Size = new System.Drawing.Size(44, 18);
+            this.lbl_Iznos.TabIndex = 14;
+            this.lbl_Iznos.Text = "Iznos:";
             // 
-            // tb_iznos
+            // lbl_brRac
             // 
-            this.tb_iznos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tb_iznos.Location = new System.Drawing.Point(573, 117);
-            this.tb_iznos.Name = "tb_iznos";
-            this.tb_iznos.Size = new System.Drawing.Size(202, 24);
-            this.tb_iznos.TabIndex = 4;
-            // 
-            // richTB_poruka
-            // 
-            this.richTB_poruka.Location = new System.Drawing.Point(681, 399);
-            this.richTB_poruka.Name = "richTB_poruka";
-            this.richTB_poruka.Size = new System.Drawing.Size(243, 139);
-            this.richTB_poruka.TabIndex = 5;
-            this.richTB_poruka.Text = "";
-            // 
-            // b_uplati
-            // 
-            this.b_uplati.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.b_uplati.Location = new System.Drawing.Point(573, 235);
-            this.b_uplati.Name = "b_uplati";
-            this.b_uplati.Size = new System.Drawing.Size(84, 39);
-            this.b_uplati.TabIndex = 6;
-            this.b_uplati.Text = "UPLATA";
-            this.b_uplati.UseVisualStyleBackColor = true;
-            this.b_uplati.Click += new System.EventHandler(this.b_uplati_Click);
-            // 
-            // b_isplati
-            // 
-            this.b_isplati.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.b_isplati.Location = new System.Drawing.Point(691, 235);
-            this.b_isplati.Name = "b_isplati";
-            this.b_isplati.Size = new System.Drawing.Size(84, 39);
-            this.b_isplati.TabIndex = 7;
-            this.b_isplati.Text = "ISPLATA";
-            this.b_isplati.UseVisualStyleBackColor = true;
-            this.b_isplati.Click += new System.EventHandler(this.b_isplati_Click);
+            this.lbl_brRac.AutoSize = true;
+            this.lbl_brRac.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_brRac.Location = new System.Drawing.Point(440, 53);
+            this.lbl_brRac.Name = "lbl_brRac";
+            this.lbl_brRac.Size = new System.Drawing.Size(81, 18);
+            this.lbl_brRac.TabIndex = 13;
+            this.lbl_brRac.Text = "Broj racuna:";
             // 
             // Form1
             // 
@@ -516,18 +458,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(986, 672);
-            this.Controls.Add(this.lbl_Poruka);
-            this.Controls.Add(this.b_isplati);
-            this.Controls.Add(this.b_uplati);
-            this.Controls.Add(this.richTB_poruka);
-            this.Controls.Add(this.tb_iznos);
-            this.Controls.Add(this.tb_brRacuna);
-            this.Controls.Add(this.lbl_podaciONovcu);
-            this.Controls.Add(this.lbl_Iznos);
-            this.Controls.Add(this.lbl_brRac);
-            this.Controls.Add(this.gb_Login);
             this.Controls.Add(this.gb_NoviKlijent);
+            this.Controls.Add(this.lbl_Poruka);
             this.Controls.Add(this.gb_GlavniEkran);
+            this.Controls.Add(this.gb_Login);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -562,12 +496,6 @@
         private System.Windows.Forms.Label lb_godrodj;
         private System.Windows.Forms.Label poruka_podaciklijent;
         private System.Windows.Forms.Label lbl_podaciOklijentu;
-        private System.Windows.Forms.Label minusporuka;
-        private System.Windows.Forms.Label stanjeporuka;
-        private System.Windows.Forms.Label lbl3_minus;
-        private System.Windows.Forms.Label lbl2_trenstanje;
-        private System.Windows.Forms.Button bt2_din;
-        private System.Windows.Forms.Button bt1_Dev;
         private System.Windows.Forms.TextBox tb_Lozinka;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_Poruka;
@@ -582,15 +510,14 @@
         private System.Windows.Forms.Label lbl_KlijentJbmg;
         private System.Windows.Forms.Label lbl_KlijentPrezime;
         private System.Windows.Forms.Label lbl_KlijentIme;
-        private System.Windows.Forms.Label lbl_brRac;
-        private System.Windows.Forms.Label lbl_Iznos;
-        private System.Windows.Forms.Label lbl_podaciONovcu;
-        private System.Windows.Forms.TextBox tb_brRacuna;
-        private System.Windows.Forms.TextBox tb_iznos;
-        private System.Windows.Forms.RichTextBox richTB_poruka;
-        private System.Windows.Forms.Button b_uplati;
         private System.Windows.Forms.Button b_isplati;
-
+        private System.Windows.Forms.Button b_uplati;
+        private System.Windows.Forms.RichTextBox richTB_poruka;
+        private System.Windows.Forms.TextBox tb_iznos;
+        private System.Windows.Forms.TextBox tb_brRacuna;
+        private System.Windows.Forms.Label lbl_podaciONovcu;
+        private System.Windows.Forms.Label lbl_Iznos;
+        private System.Windows.Forms.Label lbl_brRac;
     }
 }
 
