@@ -8,11 +8,8 @@ namespace Projekat_za_oop.Klase
 {
     public abstract class Racun
     {
-
         private double stanje;
         private string brojRacuna;
-
-
         protected abstract double ProvizijaNaUplatu(double iznos);
         protected abstract double ProvizijaNaIsplatu(double iznos);
 

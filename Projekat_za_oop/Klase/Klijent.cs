@@ -14,68 +14,41 @@ namespace Projekat_za_oop.Klase
         public string ime;
         public string prezime;
         protected string jmbg;
+        protected string lozinka;
         public int godRodj;
-        public Racun Racun;
-        private TextBox tb_Ime;
-        private TextBox tb_prezime;
-        private TextBox tb_jmbg;
-        private string text;
 
-        public Klijent(string jmbg )
+        public Klijent(string ime, string prezime, string jmbg, int godRodj, string lozinka)
         {
-            this.ime = "";
-            this.prezime = "";
+            this.ime = ime;
+            this.prezime = prezime;
             this.jmbg = jmbg;
-            this.godRodj = 0;
-        }
-        public Klijent(string ime, string prezime, string jmbg,int godRodj, Racun Racun)
-        {
-            this.ime = "";
-            this.prezime = "";
-            this.jmbg = jmbg;
-            this.godRodj = godRodj;   
-            this.Racun = Racun;
+            this.godRodj = godRodj;
+            this.lozinka = lozinka;
         }
 
-        
-
-        public Klijent(TextBox tb_Ime, TextBox tb_prezime, TextBox tb_jmbg, string text)
-        {
-            this.tb_Ime = tb_Ime;
-            this.tb_prezime = tb_prezime;
-            this.tb_jmbg = tb_jmbg;
-            this.text = text;
-        }
-
-        public string kreirajKlijenta(string ime, string prezime, string jmbg, int godRodj, Racun Racun)
-        {
-            return "Ime i Prezime:" + this.ime + this.prezime + "jmbg:" + this.jmbg + "Godina rodjenja:" + this.godRodj + "Racun:" + this.Racun;
-
-        }
         public string Jmbg
         {
             get
             {
                 return this.jmbg;
             }
-            set
+        }
+
+        public string Lozinka
+        {
+            get
             {
-                if (value == null || value == "")
-                {
-                    throw new Exception("Greska");
-                }
-                else
-                {
-                    this.jmbg = value;
-                }
+                return this.lozinka;
             }
         }
+
+
     }
 }
-        
-                
 
-                
-                
 
-        
+
+
+
+
+

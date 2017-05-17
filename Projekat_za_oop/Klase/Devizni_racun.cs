@@ -27,7 +27,6 @@ namespace Projekat_za_oop.Klase
 
         protected override double ProvizijaNaIsplatu(double iznos)
         {
-
             double obracunataProvizija = 100 + (iznos * 5 / 100);
             return obracunataProvizija;
         }
@@ -35,7 +34,6 @@ namespace Projekat_za_oop.Klase
 
         public override string VratiPodatkeORacunu()
         {
-
             return base.VratiPodatkeORacunu() + "\nTipRacuna: DEVIZNI\n\n";
         }
     }
