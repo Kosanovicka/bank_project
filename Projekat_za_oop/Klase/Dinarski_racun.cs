@@ -6,40 +6,36 @@ using System.Threading.Tasks;
 
 namespace Projekat_za_oop.Klase
 {
-    class DinarskiRacun : Racun
+    public class DinarskiRacun : Racun
     {
-        protected Racun racun;
-        protected double dozMinus;
 
-        public DinarskiRacun(double stanje, Racun racun, string brRac, double dozMinus) : base()
-        {
-            this.dozMinus = 10000;
-            this.racun = racun;
+        public DinarskiRacun(string brojRacuna) : base(brojRacuna)
+        { }
 
-        }
-        public void StanjeNaRacunu(double stanje)
+
+        public DinarskiRacun(string brojRacuna, double pocetnoStanje) : base(brojRacuna, pocetnoStanje)
+        { }
+
+
+        protected override double ProvizijaNaUplatu(double iznos)
         {
-            this.stanje = 85000;
-             
+
+            return 0;
         }
-        public double DozMinus
+
+
+        protected override double ProvizijaNaIsplatu(double iznos)
         {
-            get
-            {
-                return this.dozMinus;
-            }
-            set
-            {
-                if (value > 10000)
-                {
-                    throw new Exception("Greska");
-                }
-                else
-                {
-                    this.dozMinus = value;
-                }
-            }
+
+            double obracunataProvizija = 100 + (iznos * 3 / 100);
+            return obracunataProvizija;
+        }
+
+
+        public override string VratiPodatkeORacunu()
+        {
+
+            return base.VratiPodatkeORacunu() + "\nTip racuna: Dinarski\n\n";
         }
     }
 }
-

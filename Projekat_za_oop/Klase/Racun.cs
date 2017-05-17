@@ -6,39 +6,50 @@ using System.Threading.Tasks;
 
 namespace Projekat_za_oop.Klase
 {
-    public class Racun
+    public abstract class Racun
     {
 
-        protected string brRacuna;
-        public double stanje;
-        public double dozvoljeniMinus;
+        private double stanje;
+        private string brojRacuna;
 
-        public Racun(string brRac,double stanje,double dozMin)
+
+        protected abstract double ProvizijaNaUplatu(double iznos);
+        protected abstract double ProvizijaNaIsplatu(double iznos);
+
+
+        public Racun(string brojRacuna, double pocetnoStanje)
         {
-            this.brRacuna = brRac;
-            this.stanje = stanje;
-            this.dozvoljeniMinus = dozMin;
+            this.stanje = pocetnoStanje;
+            this.brojRacuna = brojRacuna;
         }
 
-        public Racun()
+        public Racun(string brojRacuna) : this(brojRacuna, 0) { }
+
+
+        public double VratiStanje()
         {
-            this.brRacuna = "";
-            this.stanje = 0;
-            this.dozvoljeniMinus = 10000;
+            return stanje;
         }
-        
-        public string Ispis()
+
+
+        public void UplatiNaRacun(double iznos)
         {
-            return "Broj Racuna: " + this.brRacuna +"Stanje:"+this.stanje+"Dozvoljeni minus:"+this.dozvoljeniMinus;
+
+            stanje += iznos - ProvizijaNaUplatu(iznos);
         }
-         public void Uplata(double dodatnaUplata)
+
+
+        public void IsplatiSaRacuna(double iznos)
         {
-             stanje += dodatnaUplata;
+
+            stanje -= iznos + ProvizijaNaIsplatu(iznos);
         }
-        public void Isplata(double SkidanjeNovca)
+
+
+        public virtual string VratiPodatkeORacunu()
         {
-            stanje -= SkidanjeNovca;
+            string podaci = "Racun broj: " + brojRacuna + "\nIznos na racunu: " + stanje;
+            return podaci;
         }
     }
 }
-        
