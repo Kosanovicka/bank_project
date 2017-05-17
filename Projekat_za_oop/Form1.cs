@@ -25,44 +25,76 @@ namespace Projekat_za_oop
 
         }
 
-        private void b_exit_Click(object sender, EventArgs e)
+        private void b_uplati_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string iznos = tb_iznos.Text;
+            string brRacuna = tb_brRacuna.Text;
+
+            if (iznos == "" || brRacuna == "")
+                MessageBox.Show("Najpre unesite broj racuna i iznos!");
+            else
+            {
+
+                int iznos1 = int.Parse(iznos);
+
+                DinarskiRacun racuni0 = new DinarskiRacun(brRacuna, 0);
+                DevizniRacun racuni1 = new DevizniRacun(brRacuna, 0);
+
+                
+                richTB_poruka.Text = "";
+
+                richTB_poruka.AppendText("Uplata na racun " + brRacuna + " u iznosu od " + iznos + " din.\n");
+                racuni0.UplatiNaRacun(iznos1);
+                richTB_poruka.AppendText("Podaci o racunu posle uplate: \n" + racuni0.VratiPodatkeORacunu());
+
+                richTB_poruka.AppendText("Uplata na racun " + brRacuna + " u iznosu od " + iznos +" din.\n");
+                racuni1.UplatiNaRacun(iznos1);
+                richTB_poruka.AppendText("Podaci o racunu posle uplate: \n" + racuni1.VratiPodatkeORacunu());
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void b_klijent_Click(object sender, EventArgs e)
-        {
-            int godrodj = Convert.ToInt32(tb_godrodj.Text);
-            this.Klijent = new Klijent(tb_Ime, tb_prezime, tb_jmbg, tb_godrodj.Text);
-
-
-        }
-
-        private void tb_Ime_TextChanged(object sender, EventArgs e)
+        private void b_isplati_Click(object sender, EventArgs e)
         {
             
+            string iznos = tb_iznos.Text;
+            string brRacuna = tb_brRacuna.Text;
+
             
+            if (iznos == "" || brRacuna == "")
+                MessageBox.Show("Najpre unesite broj racuna i iznos!");
+            else
+            {
 
+                double iznos1 = double.Parse(iznos);
+                
+
+                DinarskiRacun racuni0 = new DinarskiRacun(brRacuna, 0);
+                DevizniRacun racuni1 = new DevizniRacun(brRacuna, 0);
+
+                
+                richTB_poruka.Text = "";
+
+                richTB_poruka.AppendText("Isplata sa racuna " + brRacuna + " u iznosu od " + iznos + " din.\n");
+                racuni0.IsplatiSaRacuna(iznos1);
+                richTB_poruka.AppendText("Podaci o racunu posle isplate: \n" +racuni0.VratiPodatkeORacunu());
+                richTB_poruka.AppendText("Isplata sa racuna " + brRacuna + " u iznosu od " + iznos + " din.\n");
+                racuni1.IsplatiSaRacuna(iznos1);
+                richTB_poruka.AppendText("Podaci o racunu posle isplate: \n" +
+                racuni1.VratiPodatkeORacunu());
+
+            }
         }
 
-        private void tb_prezime_TextChanged(object sender, EventArgs e)
+        private void tb_iznos_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void tb_jmbg_TextChanged(object sender, EventArgs e)
+        private void b_cancel_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void tb_godrodj_TextChanged(object sender, EventArgs e)
-        {
-            int godrodj = Convert.ToInt32(tb_godrodj.Text);
+            Close();
         }
     }
 }
+    
+

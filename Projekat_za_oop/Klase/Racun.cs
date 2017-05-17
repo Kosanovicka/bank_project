@@ -41,7 +41,7 @@ namespace Projekat_za_oop.Klase
 
         public void IsplatiSaRacuna(double iznos)
         {
-
+            
             stanje -= iznos + ProvizijaNaIsplatu(iznos);
         }
 
