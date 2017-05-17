@@ -55,7 +55,6 @@
     <Compile Include="Klase\Devizni_racun.cs" />
     <Compile Include="Klase\Dinarski_racun.cs" />
     <Compile Include="Klase\Klijent.cs" />
-    <Compile Include="Klase\Osoba.cs" />
     <Compile Include="Klase\Racun.cs" />
     <Compile Include="Racun.cs">
       <SubType>Form</SubType>

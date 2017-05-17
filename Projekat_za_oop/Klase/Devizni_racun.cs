@@ -6,25 +6,35 @@ using System.Threading.Tasks;
 
 namespace Projekat_za_oop.Klase
 {
-    public class Devizni_racun : Racun
+    public class DevizniRacun : Racun
     {
-        protected double stanjeUEur;
-        protected string iban;
-        protected string swift;
-        protected Racun Racun;
 
-        public Devizni_racun(Racun racun, string brRac, string ib, string sw)
+        public DevizniRacun(string brojRacuna) : base(brojRacuna)
+        { }
+
+
+        public DevizniRacun(string brojRacuna, double pocetnoStanje) : base(brojRacuna, pocetnoStanje)
+        { }
+
+
+        protected override double ProvizijaNaUplatu(double iznos)
         {
-            this.stanjeUEur = stanje / 124;
-            this.iban = ib;
-            this.swift = sw;
-            this.brRacuna = brRac;
+
+            double obracunataProvizija = 100 + (iznos * 5 / 100);
+            return obracunataProvizija;
         }
 
-        public double Iban()
-        {
-            return stanjeUEur;
 
+        protected override double ProvizijaNaIsplatu(double iznos)
+        {
+            double obracunataProvizija = 100 + (iznos * 5 / 100);
+            return obracunataProvizija;
+        }
+
+
+        public override string VratiPodatkeORacunu()
+        {
+            return base.VratiPodatkeORacunu() + "\nTipRacuna: DEVIZNI\n\n";
         }
     }
 }
