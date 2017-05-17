@@ -61,6 +61,33 @@ namespace Projekat_za_oop
 
         }
 
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+
+            if (tb_Login_Jmbg.Text == klijent.Jmbg && tb_Login_Lozinka.Text == klijent.Lozinka)
+            {
+                gb_Login.Visible = false;
+                gb_GlavniEkran.Visible = true;
+                lbl_Poruka.Text = "";
+            }
+            else
+            {
+                lbl_Poruka.ForeColor = Color.Red;
+                lbl_Poruka.Text = "Neispravno uneti podaci!";
+            }
+
+        }
+
+        private void gb_GlavniEkran_Enter(object sender, EventArgs e)
+        {
+            lbl_KlijentIme.Text = klijent.ime;
+            lbl_KlijentPrezime.Text = klijent.prezime;
+            lbl_KlijentJbmg.Text = klijent.Jmbg;
+            lbl_KlijentGodRodj.Text = klijent.godRodj.ToString();
+        }
+
+        #region Form Change Events
+
         private void tb_Ime_TextChanged(object sender, EventArgs e)
         {
             ValidirajFormu();
@@ -86,23 +113,7 @@ namespace Projekat_za_oop
             ValidirajFormu();
         }
 
-
-        private void btn_Login_Click(object sender, EventArgs e)
-        {
-
-            if (tb_Login_Jmbg.Text == klijent.Jmbg && tb_Login_Lozinka.Text == klijent.Lozinka)
-            {
-                gb_Login.Visible = false;
-                gb_GlavniEkran.Visible = true;
-                lbl_Poruka.Text = "";
-            }
-            else
-            {
-                lbl_Poruka.ForeColor = Color.Red;
-                lbl_Poruka.Text = "Neispravno uneti podaci!";
-            }
-
-        }
+        #endregion
 
         #region Helpers
         private void PrikaziLogin()
@@ -138,5 +149,7 @@ namespace Projekat_za_oop
             // todo;;
         }
         #endregion
+
+
     }
 }
