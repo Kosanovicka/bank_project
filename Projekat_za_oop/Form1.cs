@@ -21,6 +21,7 @@ namespace Projekat_za_oop
             InitializeComponent();
         }
 
+        // Inicijalizacija forme
         private void Form1_Load(object sender, EventArgs e)
         {
             //Labels
@@ -70,22 +71,17 @@ namespace Projekat_za_oop
                 gb_Login.Visible = false;
                 gb_GlavniEkran.Visible = true;
                 lbl_Poruka.Text = "";
+
+                lbl_KlijentIme.Text = "Ime: " + klijent.ime;
+                lbl_KlijentPrezime.Text = klijent.prezime;
+                lbl_KlijentJbmg.Text = klijent.Jmbg;
+                lbl_KlijentGodRodj.Text = klijent.godRodj.ToString();
             }
             else
             {
                 lbl_Poruka.ForeColor = Color.Red;
                 lbl_Poruka.Text = "Neispravno uneti podaci!";
             }
-        }
-           
-
-
-        private void gb_GlavniEkran_Enter(object sender, EventArgs e)
-        {
-            lbl_KlijentIme.Text = klijent.ime;
-            lbl_KlijentPrezime.Text = klijent.prezime;
-            lbl_KlijentJbmg.Text = klijent.Jmbg;
-            lbl_KlijentGodRodj.Text = klijent.godRodj.ToString();
         }
 
         #region Form Change Events
@@ -99,31 +95,45 @@ namespace Projekat_za_oop
         {
             ValidirajFormu();
         }
+        private void tb_jmbg_TextChanged(object sender, EventArgs e)
+        {
+            ValidirajFormu();
+        }
+
+        private void tb_Lozinka_TextChanged(object sender, EventArgs e)
+        {
+            ValidirajFormu();
+        }
+
+        private void tb_godrodj_TextChanged(object sender, EventArgs e)
+        {
+            ValidirajFormu();
+        }
 
         private void b_isplati_Click(object sender, EventArgs e)
         {
-            
+
             string iznos = tb_iznos.Text;
             string brRacuna = tb_brRacuna.Text;
 
-            
+
             if (iznos == "" || brRacuna == "")
                 MessageBox.Show("Najpre unesite broj racuna i iznos!");
             else
             {
 
                 double iznos1 = double.Parse(iznos);
-                
+
 
                 DinarskiRacun racuni0 = new DinarskiRacun(brRacuna, 0);
                 DevizniRacun racuni1 = new DevizniRacun(brRacuna, 0);
 
-                
+
                 richTB_poruka.Text = "";
 
                 richTB_poruka.AppendText("Isplata sa racuna " + brRacuna + " u iznosu od " + iznos + " din.\n");
                 racuni0.IsplatiSaRacuna(iznos1);
-                richTB_poruka.AppendText("Podaci o racunu posle isplate: \n" +racuni0.VratiPodatkeORacunu());
+                richTB_poruka.AppendText("Podaci o racunu posle isplate: \n" + racuni0.VratiPodatkeORacunu());
                 richTB_poruka.AppendText("Isplata sa racuna " + brRacuna + " u iznosu od " + iznos + " din.\n");
                 racuni1.IsplatiSaRacuna(iznos1);
                 richTB_poruka.AppendText("Podaci o racunu posle isplate: \n" +
@@ -132,19 +142,9 @@ namespace Projekat_za_oop
             }
         }
 
-        private void tb_iznos_TextChanged(object sender, EventArgs e)
-        {
-            ValidirajFormu();
-        }
-
-        private void b_cancel_Click(object sender, EventArgs e)
+        private void b_exit_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void gb_NoviKlijent_Enter(object sender, EventArgs e)
-        {
-            ValidirajFormu();
         }
 
         #endregion
@@ -182,10 +182,10 @@ namespace Projekat_za_oop
         {
             // todo;;
         }
-        #endregion
 
+        #endregion
 
     }
 }
-    
+
 

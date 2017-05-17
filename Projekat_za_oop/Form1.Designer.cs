@@ -43,6 +43,10 @@
             this.tb_jmbg = new System.Windows.Forms.TextBox();
             this.lb_jmbg = new System.Windows.Forms.Label();
             this.gb_GlavniEkran = new System.Windows.Forms.GroupBox();
+            this.lbl_KlijentGodRodj = new System.Windows.Forms.Label();
+            this.lbl_KlijentJbmg = new System.Windows.Forms.Label();
+            this.lbl_KlijentPrezime = new System.Windows.Forms.Label();
+            this.lbl_KlijentIme = new System.Windows.Forms.Label();
             this.poruka_podaciklijent = new System.Windows.Forms.Label();
             this.lbl_podaciOklijentu = new System.Windows.Forms.Label();
             this.minusporuka = new System.Windows.Forms.Label();
@@ -54,16 +58,20 @@
             this.gb_lbl_racun = new System.Windows.Forms.Label();
             this.lbl_Poruka = new System.Windows.Forms.Label();
             this.gb_Login = new System.Windows.Forms.GroupBox();
-            this.tb_Login_Jmbg = new System.Windows.Forms.TextBox();
-            this.tb_Login_Lozinka = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btn_Login = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbl_KlijentIme = new System.Windows.Forms.Label();
-            this.lbl_KlijentPrezime = new System.Windows.Forms.Label();
-            this.lbl_KlijentJbmg = new System.Windows.Forms.Label();
-            this.lbl_KlijentGodRodj = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btn_Login = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tb_Login_Lozinka = new System.Windows.Forms.TextBox();
+            this.tb_Login_Jmbg = new System.Windows.Forms.TextBox();
+            this.lbl_brRac = new System.Windows.Forms.Label();
+            this.lbl_Iznos = new System.Windows.Forms.Label();
+            this.lbl_podaciONovcu = new System.Windows.Forms.Label();
+            this.tb_brRacuna = new System.Windows.Forms.TextBox();
+            this.tb_iznos = new System.Windows.Forms.TextBox();
+            this.richTB_poruka = new System.Windows.Forms.RichTextBox();
+            this.b_uplati = new System.Windows.Forms.Button();
+            this.b_isplati = new System.Windows.Forms.Button();
             this.gb_NoviKlijent.SuspendLayout();
             this.gb_GlavniEkran.SuspendLayout();
             this.gb_Login.SuspendLayout();
@@ -97,6 +105,7 @@
             this.b_exit.TabIndex = 99;
             this.b_exit.Text = "Izadji";
             this.b_exit.UseVisualStyleBackColor = true;
+            this.b_exit.Click += new System.EventHandler(this.b_exit_Click);
             // 
             // btn_KreirajKlijenta
             // 
@@ -147,7 +156,6 @@
             this.gb_NoviKlijent.Size = new System.Drawing.Size(969, 562);
             this.gb_NoviKlijent.TabIndex = 3;
             this.gb_NoviKlijent.TabStop = false;
-            this.gb_NoviKlijent.Enter += new System.EventHandler(this.gb_NoviKlijent_Enter);
             // 
             // tb_Lozinka
             // 
@@ -159,6 +167,7 @@
             this.tb_Lozinka.TabIndex = 3;
             this.tb_Lozinka.TabStop = false;
             this.tb_Lozinka.UseSystemPasswordChar = true;
+            this.tb_Lozinka.TextChanged += new System.EventHandler(this.tb_Lozinka_TextChanged);
             // 
             // label1
             // 
@@ -178,6 +187,7 @@
             this.tb_godrodj.Name = "tb_godrodj";
             this.tb_godrodj.Size = new System.Drawing.Size(150, 25);
             this.tb_godrodj.TabIndex = 4;
+            this.tb_godrodj.TextChanged += new System.EventHandler(this.tb_godrodj_TextChanged);
             // 
             // lb_godrodj
             // 
@@ -197,6 +207,7 @@
             this.tb_jmbg.Name = "tb_jmbg";
             this.tb_jmbg.Size = new System.Drawing.Size(250, 25);
             this.tb_jmbg.TabIndex = 2;
+            this.tb_jmbg.TextChanged += new System.EventHandler(this.tb_jmbg_TextChanged);
             // 
             // lb_jmbg
             // 
@@ -230,7 +241,42 @@
             this.gb_GlavniEkran.Size = new System.Drawing.Size(963, 547);
             this.gb_GlavniEkran.TabIndex = 11;
             this.gb_GlavniEkran.TabStop = false;
-            this.gb_GlavniEkran.Enter += new System.EventHandler(this.gb_GlavniEkran_Enter);
+            // 
+            // lbl_KlijentGodRodj
+            // 
+            this.lbl_KlijentGodRodj.AutoSize = true;
+            this.lbl_KlijentGodRodj.Location = new System.Drawing.Point(18, 169);
+            this.lbl_KlijentGodRodj.Name = "lbl_KlijentGodRodj";
+            this.lbl_KlijentGodRodj.Size = new System.Drawing.Size(35, 13);
+            this.lbl_KlijentGodRodj.TabIndex = 12;
+            this.lbl_KlijentGodRodj.Text = "label8";
+            // 
+            // lbl_KlijentJbmg
+            // 
+            this.lbl_KlijentJbmg.AutoSize = true;
+            this.lbl_KlijentJbmg.Location = new System.Drawing.Point(18, 145);
+            this.lbl_KlijentJbmg.Name = "lbl_KlijentJbmg";
+            this.lbl_KlijentJbmg.Size = new System.Drawing.Size(35, 13);
+            this.lbl_KlijentJbmg.TabIndex = 11;
+            this.lbl_KlijentJbmg.Text = "label7";
+            // 
+            // lbl_KlijentPrezime
+            // 
+            this.lbl_KlijentPrezime.AutoSize = true;
+            this.lbl_KlijentPrezime.Location = new System.Drawing.Point(18, 121);
+            this.lbl_KlijentPrezime.Name = "lbl_KlijentPrezime";
+            this.lbl_KlijentPrezime.Size = new System.Drawing.Size(35, 13);
+            this.lbl_KlijentPrezime.TabIndex = 10;
+            this.lbl_KlijentPrezime.Text = "label6";
+            // 
+            // lbl_KlijentIme
+            // 
+            this.lbl_KlijentIme.AutoSize = true;
+            this.lbl_KlijentIme.Location = new System.Drawing.Point(18, 98);
+            this.lbl_KlijentIme.Name = "lbl_KlijentIme";
+            this.lbl_KlijentIme.Size = new System.Drawing.Size(35, 13);
+            this.lbl_KlijentIme.TabIndex = 9;
+            this.lbl_KlijentIme.Text = "label5";
             // 
             // poruka_podaciklijent
             // 
@@ -337,28 +383,23 @@
             this.gb_Login.TabIndex = 17;
             this.gb_Login.TabStop = false;
             // 
-            // tb_Login_Jmbg
+            // label4
             // 
-            this.tb_Login_Jmbg.Location = new System.Drawing.Point(415, 245);
-            this.tb_Login_Jmbg.Name = "tb_Login_Jmbg";
-            this.tb_Login_Jmbg.Size = new System.Drawing.Size(148, 20);
-            this.tb_Login_Jmbg.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(465, 229);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "JMBG";
             // 
-            // tb_Login_Lozinka
+            // label3
             // 
-            this.tb_Login_Lozinka.Location = new System.Drawing.Point(415, 287);
-            this.tb_Login_Lozinka.Name = "tb_Login_Lozinka";
-            this.tb_Login_Lozinka.Size = new System.Drawing.Size(148, 20);
-            this.tb_Login_Lozinka.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(439, 181);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Uloguj se na sistem";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(462, 271);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Lozinka";
             // 
             // btn_Login
             // 
@@ -370,69 +411,28 @@
             this.btn_Login.UseVisualStyleBackColor = true;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(462, 271);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Lozinka";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(439, 181);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Uloguj se na sistem";
             // 
-            // label4
+            // tb_Login_Lozinka
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(465, 229);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "JMBG";
+            this.tb_Login_Lozinka.Location = new System.Drawing.Point(415, 287);
+            this.tb_Login_Lozinka.Name = "tb_Login_Lozinka";
+            this.tb_Login_Lozinka.Size = new System.Drawing.Size(148, 20);
+            this.tb_Login_Lozinka.TabIndex = 1;
             // 
-            // lbl_KlijentIme
+            // tb_Login_Jmbg
             // 
-            this.lbl_KlijentIme.AutoSize = true;
-            this.lbl_KlijentIme.Location = new System.Drawing.Point(18, 98);
-            this.lbl_KlijentIme.Name = "lbl_KlijentIme";
-            this.lbl_KlijentIme.Size = new System.Drawing.Size(35, 13);
-            this.lbl_KlijentIme.TabIndex = 9;
-            this.lbl_KlijentIme.Text = "label5";
-            // 
-            // lbl_KlijentPrezime
-            // 
-            this.lbl_KlijentPrezime.AutoSize = true;
-            this.lbl_KlijentPrezime.Location = new System.Drawing.Point(18, 121);
-            this.lbl_KlijentPrezime.Name = "lbl_KlijentPrezime";
-            this.lbl_KlijentPrezime.Size = new System.Drawing.Size(35, 13);
-            this.lbl_KlijentPrezime.TabIndex = 10;
-            this.lbl_KlijentPrezime.Text = "label6";
-            // 
-            // lbl_KlijentJbmg
-            // 
-            this.lbl_KlijentJbmg.AutoSize = true;
-            this.lbl_KlijentJbmg.Location = new System.Drawing.Point(18, 145);
-            this.lbl_KlijentJbmg.Name = "lbl_KlijentJbmg";
-            this.lbl_KlijentJbmg.Size = new System.Drawing.Size(35, 13);
-            this.lbl_KlijentJbmg.TabIndex = 11;
-            this.lbl_KlijentJbmg.Text = "label7";
-            // 
-            // lbl_KlijentGodRodj
-            // 
-            this.lbl_KlijentGodRodj.AutoSize = true;
-            this.lbl_KlijentGodRodj.Location = new System.Drawing.Point(18, 169);
-            this.lbl_KlijentGodRodj.Name = "lbl_KlijentGodRodj";
-            this.lbl_KlijentGodRodj.Size = new System.Drawing.Size(35, 13);
-            this.lbl_KlijentGodRodj.TabIndex = 12;
-            this.lbl_KlijentGodRodj.Text = "label8";
-            this.lbl_brRac = new System.Windows.Forms.Label();
-            this.lbl_Iznos = new System.Windows.Forms.Label();
-            this.lbl_podaciONovcu = new System.Windows.Forms.Label();
-            this.tb_brRacuna = new System.Windows.Forms.TextBox();
-            this.tb_iznos = new System.Windows.Forms.TextBox();
-            this.richTB_poruka = new System.Windows.Forms.RichTextBox();
-            this.b_uplati = new System.Windows.Forms.Button();
-            this.b_isplati = new System.Windows.Forms.Button();
-            this.b_cancel = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            this.tb_Login_Jmbg.Location = new System.Drawing.Point(415, 245);
+            this.tb_Login_Jmbg.Name = "tb_Login_Jmbg";
+            this.tb_Login_Jmbg.Size = new System.Drawing.Size(148, 20);
+            this.tb_Login_Jmbg.TabIndex = 0;
             // 
             // lbl_brRac
             // 
@@ -479,7 +479,6 @@
             this.tb_iznos.Name = "tb_iznos";
             this.tb_iznos.Size = new System.Drawing.Size(202, 24);
             this.tb_iznos.TabIndex = 4;
-            this.tb_iznos.TextChanged += new System.EventHandler(this.tb_iznos_TextChanged);
             // 
             // richTB_poruka
             // 
@@ -511,17 +510,6 @@
             this.b_isplati.UseVisualStyleBackColor = true;
             this.b_isplati.Click += new System.EventHandler(this.b_isplati_Click);
             // 
-            // b_cancel
-            // 
-            this.b_cancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.b_cancel.Location = new System.Drawing.Point(691, 578);
-            this.b_cancel.Name = "b_cancel";
-            this.b_cancel.Size = new System.Drawing.Size(84, 39);
-            this.b_cancel.TabIndex = 8;
-            this.b_cancel.Text = "IZADJI";
-            this.b_cancel.UseVisualStyleBackColor = true;
-            this.b_cancel.Click += new System.EventHandler(this.b_cancel_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -529,10 +517,6 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(986, 672);
             this.Controls.Add(this.lbl_Poruka);
-            this.Controls.Add(this.gb_GlavniEkran);
-            this.Controls.Add(this.gb_Login);
-            this.Controls.Add(this.gb_NoviKlijent);
-            this.Controls.Add(this.b_cancel);
             this.Controls.Add(this.b_isplati);
             this.Controls.Add(this.b_uplati);
             this.Controls.Add(this.richTB_poruka);
@@ -541,6 +525,9 @@
             this.Controls.Add(this.lbl_podaciONovcu);
             this.Controls.Add(this.lbl_Iznos);
             this.Controls.Add(this.lbl_brRac);
+            this.Controls.Add(this.gb_Login);
+            this.Controls.Add(this.gb_NoviKlijent);
+            this.Controls.Add(this.gb_GlavniEkran);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -603,7 +590,6 @@
         private System.Windows.Forms.RichTextBox richTB_poruka;
         private System.Windows.Forms.Button b_uplati;
         private System.Windows.Forms.Button b_isplati;
-        private System.Windows.Forms.Button b_cancel;
 
     }
 }
